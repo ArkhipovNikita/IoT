@@ -1,0 +1,43 @@
+syntax = "proto3";
+
+service Math {
+  rpc get_sqrt(SqrtRequest) returns (SqrtResponse) {}
+
+  rpc get_std(stream StdRequest) returns (StdResponse) {}
+
+  rpc get_multipliers(MultipliersRequest) returns (stream MultipliersResponse) {}
+
+  rpc get_max(stream MaxRequest) returns (stream MaxResponse) {}
+}
+
+message SqrtRequest {
+  double number = 1;
+}
+
+message SqrtResponse {
+  double sqrt = 1;
+}
+
+message StdRequest {
+  double number = 1;
+}
+
+message StdResponse {
+  double std = 1;
+}
+
+message MultipliersRequest {
+  int32 number = 1;
+}
+
+message MultipliersResponse {
+  int32 number = 1;
+}
+
+message MaxRequest {
+  int32 number = 1;
+}
+
+message MaxResponse {
+  int32 max = 1;
+}
