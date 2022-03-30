@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+service Event {
+  rpc post_event(CreateEventRequest) returns (CreateEventResponse) {}
+}
+
+message CreateEventRequest {
+  string message = 1;
+}
+
+message CreateEventResponse {
+}
