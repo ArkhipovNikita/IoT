@@ -1,0 +1,23 @@
+<div>
+    <h2>Статистика входов</h2>
+    <table>
+        <tr>
+            <th>RDID UID</th>
+            <th>When</th>
+            <th>Has access</th>
+        </tr>
+        {% for rec in recs %}
+            <tr>
+                <td>{{ rec['uid'] }}</td>
+                <td>{{ rec['created_at'] }}</td>
+                <td>{{ rec['has_access'] }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+</div>
+<div>
+    <h2>Подать сигнал</h2>
+    <form method="post">
+        <input type="submit">
+    </form>
+</div>
